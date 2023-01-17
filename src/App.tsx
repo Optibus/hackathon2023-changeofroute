@@ -1,5 +1,10 @@
-import React from 'react';
+import React from "react";
+import MapContainer from "./MapContainer";
 
-const App: React.FC = () => <p>App works.</p>
+const App: React.FC = () => (
+  <div>
+    <MapContainer />
+  </div>
+);
 
-export default App
+export default App;
