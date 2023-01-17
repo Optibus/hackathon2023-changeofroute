@@ -1,6 +1,7 @@
 import React from "react";
 import { createBrowserRouter, Link, Outlet } from "react-router-dom";
 import MapContainer from "./MapContainer";
+import CancalledRouteCube from "./CancalledRouteCube";
 
 const Root: React.FC = () => (
   <>
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/edit",
         element: <MapContainer />,
+      },
+      {
+        path: "/cube",
+        element: <CancalledRouteCube text='56' color='red' />,
       },
       {
         path: "/preview",
