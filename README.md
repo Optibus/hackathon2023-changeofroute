@@ -11,3 +11,9 @@ Run the app:
 ```bash
 $ npm start
 ```
+
+Run the storybook:
+
+```bash
+$ npm run storybook
+```

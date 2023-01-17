@@ -2,17 +2,18 @@ import { FeatureCollection, LineString, Point } from "geojson";
 
 export type Stops = FeatureCollection;
 export type Stop = {
-    name: string;
-    id: string;
-    geometry: Point
-}
+  name: string;
+  id: string;
+  geometry: Point;
+  isCancelled?: boolean;
+};
 export type Route = {
-    name: string;
-    color: string;
-    geometry: LineString;
-}
+  name: string;
+  color: string;
+  geometry: LineString;
+};
 
 export type Segment = {
-    geometry: LineString;
-    color?: string;
-}
+  geometry: LineString;
+  color?: string;
+};
