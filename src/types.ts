@@ -8,6 +8,12 @@ export type Stop = {
   isCancelled?: boolean;
   color?: string;
 };
+
+export type StopDescription = {
+    name: string;
+    id: string;
+}
+
 export type Route = {
   name: string;
   color: string;
@@ -23,6 +29,7 @@ export type WalkingDistance = {
   minutes: number;
   meters: number;
 };
+
 export type StopAlternative = {
   stop?: Stop;
   walkingDistance?: WalkingDistance;
