@@ -4,7 +4,7 @@ export type Stops = Stop[];
 export type Stop = {
   name: string;
   id: string;
-  geometry?: Point;
+  geometry: Point;
   isCancelled?: boolean;
   color?: string;
 };
