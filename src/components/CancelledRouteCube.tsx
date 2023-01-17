@@ -32,7 +32,7 @@ interface ICancelledRouteCubeProps {
   color: string;
 }
 
-const CancelledRouteCubeProps = ({ text, color }: ICancelledRouteCubeProps) => {
+const CancelledRouteCube = ({ text, color }: ICancelledRouteCubeProps) => {
   return (
     <StyledCube>
       <SetyledCubeText>{text}</SetyledCubeText>
@@ -41,4 +41,4 @@ const CancelledRouteCubeProps = ({ text, color }: ICancelledRouteCubeProps) => {
   );
 };
 
-export default CancelledRouteCubeProps;
+export default CancelledRouteCube;
