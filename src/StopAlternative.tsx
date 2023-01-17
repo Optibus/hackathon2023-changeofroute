@@ -5,10 +5,11 @@ import arrowRight from "./icons/arrow-right.svg";
 import line from "./icons/line-divider.svg";
 import stopPoint from "./icons/stop-point.svg";
 import miniStop from "./icons/mini-stop.svg";
+import stopAlternative from "./icons/bus-stop-alternative.svg";
 
 
 const StyledDiv = styled.div`
-  width: 400px;
+  width: 300px;
   border-radius: 18px;
   border: 6px ${({color})=> color} solid;
   display: flex;
@@ -96,6 +97,7 @@ const StopAlternative = ({ stop, walkingDistance, color = "red"}: StopAlternativ
       <MainSection> 
         <StyledImage src={man} alt="go"/>
           <MinuteArrow minutes={walkingDistance.minutes} />
+          <img src={stopAlternative} alt="stop"/>
       </MainSection>
       <DividerLine src={line} alt="divider" />
       <StopInfoItem icon={stopPoint} text={stop?.name} />
