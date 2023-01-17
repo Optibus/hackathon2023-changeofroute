@@ -17,6 +17,7 @@
     "react-map-gl": "^7.0.21",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4",
     "worker-loader": "^3.0.8"
@@ -40,5 +41,8 @@
     "not chrome < 51",
     "not safari < 10",
     "not android < 51"
-  ]
+  ],
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
+  }
 }
