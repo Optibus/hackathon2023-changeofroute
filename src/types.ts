@@ -19,26 +19,25 @@ export type Segment = {
 };
 
 export type WalkingDistance = {
-    minutes: number;
-    meters: number;
-  }
+  minutes: number;
+  meters: number;
+};
 export type StopAlternative = {
-    stop?: Stop;
-    walkingDistance?: WalkingDistance;
-    color?: string;
-}
-  
+  stop?: Stop;
+  walkingDistance?: WalkingDistance;
+  color?: string;
+};
 
 export type PosterData = {
-    cancelledStop: Array<Stop>;
-    alternatives: Array<StopAlternative>
-    stop: Stop;
-    stops: Array<Stop>;
-    routes: Array<Route>;
-    cancelledSegments: Array<Route>;
-    dates: {
-        start?: Date,
-        end?: Date
-    }
-    logo: string; // URL to the image
-}
+  cancelledStops: Array<Stop>;
+  alternatives: Array<StopAlternative>;
+  stop: Stop;
+  stops: Array<Stop>;
+  routes: Array<Route>;
+  cancelledSegments: Array<Route>;
+  dates: {
+    start?: Date;
+    end?: Date;
+  };
+  logo: string; // URL to the image
+};
