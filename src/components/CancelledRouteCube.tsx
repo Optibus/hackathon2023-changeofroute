@@ -20,12 +20,12 @@ const WrapperWithDiagonalLine = styled.div`
   position: absolute;
 `;
 
- const SetyledCubeText = styled.div`
- position: absolute;
- left: 50%;
- top: 50%;
- transform: translate(-50%,-50%);
- `;
+const SetyledCubeText = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 interface ICancelledRouteCubeProps {
   text: string;
@@ -34,10 +34,10 @@ interface ICancelledRouteCubeProps {
 
 const CancelledRouteCubeProps = ({ text, color }: ICancelledRouteCubeProps) => {
   return (
-   <StyledCube>
-     <SetyledCubeText>{text}</SetyledCubeText>
-    <WrapperWithDiagonalLine color={color}></WrapperWithDiagonalLine>
-   </StyledCube>
+    <StyledCube>
+      <SetyledCubeText>{text}</SetyledCubeText>
+      <WrapperWithDiagonalLine color={color}></WrapperWithDiagonalLine>
+    </StyledCube>
   );
 };
 
