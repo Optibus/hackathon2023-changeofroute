@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, Link, Outlet } from "react-router-dom";
 import MapContainer from "./MapContainer";
 import CancalledRouteCube from "./CancalledRouteCube";
+import CancelledStop from "./CancelledStop";
 
 const Root: React.FC = () => (
   <>
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/preview",
         element: <MapContainer />,
+      },
+      {
+        path: "/cancelled-stop",
+        element: <CancelledStop />,
       },
     ],
   },
