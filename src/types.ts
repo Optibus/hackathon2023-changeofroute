@@ -1,16 +1,17 @@
-import { FeatureCollection, LineString, Point } from "geojson";
+import { LineString, MultiLineString, Point } from "geojson";
 
-export type Stops = FeatureCollection;
+export type Stops = Stop[];
 export type Stop = {
   name: string;
   id: string;
   geometry: Point;
   isCancelled?: boolean;
+  color?: string;
 };
 export type Route = {
   name: string;
   color: string;
-  geometry: LineString;
+  geometry: MultiLineString | LineString;
 };
 
 export type Segment = {

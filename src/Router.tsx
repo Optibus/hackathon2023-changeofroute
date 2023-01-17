@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, Link, Outlet } from "react-router-dom";
 import CancalledRouteCube from "./components/CancelledRouteCube";
 import CancelledStop from "./components/CancelledStop";
-import MapContainer from "./components/MapContainer";
+import MapExample from "./MapExample";
 
 const Root: React.FC = () => (
   <>
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/edit",
-        element: <MapContainer />,
+        element: <div>blah</div>,
       },
       {
         path: "/cube",
@@ -30,7 +30,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/preview",
-        element: <MapContainer />,
+        element: <div>blah</div>,
+      },
+      {
+        path: "/maptest",
+        element: <MapExample />,
       },
       {
         path: "/cancelled-stop",
