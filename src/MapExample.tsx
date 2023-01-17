@@ -13,6 +13,17 @@ const MapExample = () => (
         },
       },
     ]}
+    cancelledStops={[
+      {
+        name: "foo",
+        id: "foo",
+        color: "#007cbf",
+        geometry: {
+          type: "Point",
+          coordinates: [34.792059484307686, 32.076675838114674],
+        },
+      },
+    ]}
     routes={[
       {
         name: "foo",
