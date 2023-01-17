@@ -11,16 +11,16 @@ type Props = {
   stops?: Stop[];
   cancelledStops?: Stop[];
   routes?: Route[];
-  height?: number;
-  width?: number;
+  height?: string;
+  width?: string;
 };
 
 const MapContainer = ({
   stops = [],
   cancelledStops,
   routes = [],
-  height = 400,
-  width = 600,
+  height = "calc(98 * 0.8vw)",
+  width = "98vw",
 }: Props) => {
   const stopsGeojson: FeatureCollection = useMemo(
     () => ({

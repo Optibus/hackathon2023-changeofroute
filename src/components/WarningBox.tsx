@@ -8,7 +8,9 @@ const Wrapper = styled("div")({
   flexDirection: "column",
   alignItems: "center",
   padding: "34px",
-  width: "350px",
+  width: "31.765%",
+  position: "absolute",
+  top: "10%",
 });
 
 const StyledDate = styled("div")({

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StopDescription, WalkingDistance } from './types';
+import { StopDescription, WalkingDistance } from "./types";
 import man from "./icons/man-walking.svg";
 import arrowRight from "./icons/arrow-right.svg";
 import line from "./icons/line-divider.svg";
@@ -7,11 +7,9 @@ import stopPoint from "./icons/stop-point.svg";
 import miniStop from "./icons/mini-stop.svg";
 import stopAlternative from "./icons/bus-stop-alternative.svg";
 
-
 const StyledDiv = styled.div`
-  width: 300px;
   border-radius: 18px;
-  border: 6px ${({color})=> color} solid;
+  border: 6px ${({ color }) => color} solid;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,9 +26,7 @@ const MinuteText = styled.span`
   line-height: 20px;
 `;
 
-
-const StyledImage = styled.img`
-`;
+const StyledImage = styled.img``;
 
 const StopInfoIcon = styled.img`
   padding-right: 10px;
@@ -57,7 +53,7 @@ const StopInfoItemWrapper = styled.div`
   display: flex;
   margin: 10px;
 `;
-const DividerLine =  styled.img`
+const DividerLine = styled.img`
   margin-top: 20px;
   margin-bottom: 10px;
 `;
@@ -75,36 +71,41 @@ const MinuteArrowWrraper = styled.div`
   justify-content: center;
 `;
 
-const MinuteArrow = ({minutes}: {minutes: number}) => {
-  return <MinuteArrowWrraper>
-    <MinuteNumber>{minutes}</MinuteNumber>
-    <MinuteText>Minutes</MinuteText>
-    <StyledImage src={arrowRight} alt="to" width="100%"/>
-  </MinuteArrowWrraper>
-}
+const MinuteArrow = ({ minutes }: { minutes: number }) => {
+  return (
+    <MinuteArrowWrraper>
+      <MinuteNumber>{minutes}</MinuteNumber>
+      <MinuteText>Minutes</MinuteText>
+      <StyledImage src={arrowRight} alt="to" width="100%" />
+    </MinuteArrowWrraper>
+  );
+};
 
-const StopInfoItem =  ({icon, text}: {icon: string, text: string})=> (<StopInfoItemWrapper>
-  <StopInfoIcon src={icon} alt="stop-info"/>
-  {text}
+const StopInfoItem = ({ icon, text }: { icon: string; text: string }) => (
+  <StopInfoItemWrapper>
+    <StopInfoIcon src={icon} alt="stop-info" />
+    {text}
   </StopInfoItemWrapper>
 );
 
-const StopAlternative = ({ stop, walkingDistance, color = "red"}: StopAlternativeProps) => {
+const StopAlternative = ({
+  stop,
+  walkingDistance,
+  color = "red",
+}: StopAlternativeProps) => {
   return (
-   <div>
-    <StyledDiv color={color}> 
+    <StyledDiv color={color}>
       <div>
-      <MainSection> 
-        <StyledImage src={man} alt="go"/>
+        <MainSection>
+          <StyledImage src={man} alt="go" />
           <MinuteArrow minutes={walkingDistance.minutes} />
-          <img src={stopAlternative} alt="stop"/>
-      </MainSection>
-      <DividerLine src={line} alt="divider" />
-      <StopInfoItem icon={stopPoint} text={stop?.name} />
-      <StopInfoItem icon={miniStop} text={stop?.id} />
+          <img src={stopAlternative} alt="stop" />
+        </MainSection>
+        <DividerLine src={line} alt="divider" />
+        <StopInfoItem icon={stopPoint} text={stop?.name} />
+        <StopInfoItem icon={miniStop} text={stop?.id} />
       </div>
     </StyledDiv>
-   </div>
   );
 };
 

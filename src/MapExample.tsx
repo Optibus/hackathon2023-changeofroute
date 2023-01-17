@@ -27,7 +27,7 @@ const MapExample = () => (
     routes={[
       {
         name: "foo",
-        color: "#007cbf",
+        color: "#A7FFDA",
         geometry: {
           type: "MultiLineString",
           coordinates: [
