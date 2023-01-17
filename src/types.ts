@@ -18,3 +18,27 @@ export type Segment = {
   geometry: LineString;
   color?: string;
 };
+
+export type WalkingDistance = {
+  minutes: number;
+  meters: number;
+};
+export type StopAlternative = {
+  stop?: Stop;
+  walkingDistance?: WalkingDistance;
+  color?: string;
+};
+
+export type PosterData = {
+  cancelledStops: Array<Stop>;
+  alternatives: Array<StopAlternative>;
+  stop: Stop;
+  stops: Array<Stop>;
+  routes: Array<Route>;
+  cancelledSegments: Array<Route>;
+  dates: {
+    start?: Date;
+    end?: Date;
+  };
+  logo: string; // URL to the image
+};
