@@ -1,8 +1,8 @@
 import React from "react";
 import { createBrowserRouter, Link, Outlet } from "react-router-dom";
-import MapContainer from "./MapContainer";
-import CancalledRouteCube from "./CancalledRouteCube";
-import CancelledStop from "./CancelledStop";
+import CancelledRouteCube from "./components/CancelledRouteCube";
+import CancelledStop from "./components/CancelledStop";
+import MapExample from "./MapExample";
 
 const Root: React.FC = () => (
   <>
@@ -22,15 +22,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/edit",
-        element: <MapContainer />,
+        element: <div>blah</div>,
       },
       {
         path: "/cube",
-        element: <CancalledRouteCube text='56' color='red' />,
+        element: <CancelledRouteCube text="56" color="red" />,
       },
       {
         path: "/preview",
-        element: <MapContainer />,
+        element: <div>blah</div>,
+      },
+      {
+        path: "/maptest",
+        element: <MapExample />,
       },
       {
         path: "/cancelled-stop",
