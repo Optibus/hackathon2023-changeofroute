@@ -7,12 +7,20 @@ const TOKEN =
   "pk.eyJ1IjoiZWxhZGFsZmFzc2EiLCJhIjoiY2xkMDRmaGY2MTM3aDNxcWx3dHYzZjl3eiJ9.AM2H8oWyhMuLgC6Rqnp84g";
 
 type Props = {
-  stops: Stop[];
+  stops?: Stop[];
   cancelledStops?: Stop[];
-  routes: Route[];
+  routes?: Route[];
+  height?: number;
+  width?: number;
 };
 
-const MapContainer = ({ stops, cancelledStops, routes }: Props) => {
+const MapContainer = ({
+  stops = [],
+  cancelledStops,
+  routes = [],
+  height = 400,
+  width = 600,
+}: Props) => {
   const stopsGeojson: FeatureCollection = useMemo(
     () => ({
       type: "FeatureCollection",
@@ -50,18 +58,21 @@ const MapContainer = ({ stops, cancelledStops, routes }: Props) => {
         latitude: 32.0756,
         zoom: 14,
       }}
-      style={{ width: 600, height: 400 }}
-      mapStyle="mapbox://styles/mapbox/streets-v9"
+      style={{ width, height }}
+      mapStyle="mapbox://styles/mapbox/streets-v12"
       mapboxAccessToken={TOKEN}
     >
+      <Source id="routes" type="geojson" data={routesGeojson}>
+        <Layer
+          type="line"
+          paint={{ "line-color": ["get", "color"], "line-width": 5 }}
+        />
+      </Source>
       <Source id="stops" type="geojson" data={stopsGeojson}>
         <Layer
           type="circle"
-          paint={{ "circle-radius": 10, "circle-color": "#007cbf" }}
+          paint={{ "circle-radius": 10, "circle-color": ["get", "color"] }}
         />
-      </Source>
-      <Source id="routes" type="geojson" data={routesGeojson}>
-        <Layer type="line" paint={{ "line-color": ["get", "color"] }} />
       </Source>
     </Map>
   );
