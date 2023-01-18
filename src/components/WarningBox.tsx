@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import React from "react";
 import styled from "styled-components";
 import warning from "../icons/warning2.svg";
@@ -48,11 +49,19 @@ interface IWarningBoxProps {
     code: string;
     color: string;
   }>;
+  startDate: Date;
+  endDate: Date;
 }
 
-const WarningBox: React.FC<IWarningBoxProps> = ({ lines }) => (
+const WarningBox: React.FC<IWarningBoxProps> = ({
+  lines,
+  startDate,
+  endDate,
+}) => (
   <Wrapper>
-    <StyledDate>17.12.2022-05.01.2023</StyledDate>
+    <StyledDate>
+      {format(startDate, "dd.MM.yyyy")}-{format(endDate, "dd.MM.yyyy")}
+    </StyledDate>
     <img src={warning} alt="Cancelled stop" width="180" />
     <StyledText>
       This stop is out of service for the following lines:

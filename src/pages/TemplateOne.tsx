@@ -1045,8 +1045,8 @@ const TemplateOne: React.FC = () => {
       },
     ],
     dates: {
-      start: new Date("1970-01-01T00:00:00.019Z"),
-      end: new Date("1970-01-01T00:00:00.020Z"),
+      start: new Date("2023-01-18T00:00:00.019Z"),
+      end: new Date("2023-02-18T00:00:00.020Z"),
     },
   };
 
@@ -1061,6 +1061,8 @@ const TemplateOne: React.FC = () => {
         routes={data.routes}
       ></MapContainer>
       <WarningBox
+        startDate={data.dates.start!}
+        endDate={data.dates.end!}
         lines={data.routes.map((r, i) => ({
           code: r.name,
           color: COLORS[i],

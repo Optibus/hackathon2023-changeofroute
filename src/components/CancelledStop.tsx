@@ -500,6 +500,8 @@ const CancelledStop = () => {
         ]}
       ></MapContainer>
       <WarningBox
+        startDate={new Date()}
+        endDate={new Date()}
         lines={[
           { code: "20", color: "#A7FFDA" },
           { code: "5", color: "#E8A7FF" },

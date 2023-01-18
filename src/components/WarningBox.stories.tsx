@@ -13,6 +13,8 @@ const Template: ComponentStory<typeof WarningBox> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
+  startDate: new Date("2022-12-17"),
+  endDate: new Date("2023-01-25"),
   lines: [
     {
       code: "20",
