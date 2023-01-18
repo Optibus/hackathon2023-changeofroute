@@ -15,7 +15,7 @@ const TemplateWrapper = styled("div")({
 });
 const StyledPleaseUseText = styled("div")({
   width: "100%",
-  padding: "5% 10%",
+  padding: "5% 0",
   fontSize: "2rem",
   fontWeight: "bold",
   textAlign: "center",
@@ -524,10 +524,7 @@ const CancelledStop = () => {
           </StopAlternativeWrapper>
         ))}
       </div>
-      <StyledUserText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </StyledUserText>
+      <StyledUserText>Thank you for your patience!</StyledUserText>
       <TemplateFooter></TemplateFooter>
     </TemplateWrapper>
   );

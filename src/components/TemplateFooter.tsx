@@ -3,6 +3,7 @@ import styled from "styled-components";
 const TemplateWrapper = styled("div")({
   position: "absolute",
   bottom: 0,
+  left: 0,
   backgroundColor: "#001231",
   padding: "3% 0",
   textAlign: "center",

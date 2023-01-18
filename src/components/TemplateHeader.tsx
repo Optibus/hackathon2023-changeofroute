@@ -10,7 +10,7 @@ const StyledTemplateHeader = styled("div")({
   //  "repeating-linear-gradient(-45deg, #FFF06A 0, #FFF06A 3%, #000 3%, #000 5%, #FFF06A 5%, #FFF06A 8%, #000 8%, #000 10%, #FFF06A 20%, #FFF06A 25%, #000 80%, #000 90%, #FFF06A 90%, #FFF06A 100%)",
   width: "100%",
   zIndex: "10",
-  padding: "2%",
+  padding: "2% 0",
 });
 const StyledTemplateHeaderText = styled("div")({
   position: "absolute",
