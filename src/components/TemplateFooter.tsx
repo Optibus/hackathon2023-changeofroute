@@ -9,11 +9,23 @@ const TemplateWrapper = styled("div")({
   textAlign: "center",
   color: "#fff",
   width: "100%",
+  fontWeight: "bold",
+  fontSize: "18px",
+});
+const CreatedByOptibus = styled("div")({
+  textAlign: "center",
+  color: "#fff",
+  width: "100%",
+  fontSize: "17px",
+  fontWeight: "normal",
 });
 const TemplateFooter = () => {
   return (
     <TemplateWrapper>
       09 366 6400 | Auckland Transport General Private Bag 92250, Auckland 1142
+      <CreatedByOptibus>
+        Created by Optibus
+      </CreatedByOptibus>
     </TemplateWrapper>
   );
 };
