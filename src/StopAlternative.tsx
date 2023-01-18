@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
   border: 6px ${({ color }) => color} solid;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 56px;
 `;
 
