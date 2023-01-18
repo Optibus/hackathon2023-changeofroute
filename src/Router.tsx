@@ -5,6 +5,7 @@ import MapExample from "./MapExample";
 import MapContainer from "./components/MapContainer";
 import CancelledStop from "./components/CancelledStop";
 import StopAlternative from "./StopAlternative";
+import TemplateTwo from "./components/TemplateTwo";
 
 const Root: React.FC = () => (
   <>
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/stop-alternative",
         element: <StopAlternative stop={myAlternative.stop} walkingDistance={myAlternative.walkingDistance} color={myAlternative.color}/>,
+      },
+      {
+        path: "/TemplateTwo",
+        element: <TemplateTwo />,
       },
     ],
   },

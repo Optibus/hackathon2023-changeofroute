@@ -1,5 +1,4 @@
 import MapContainer from "./MapContainer";
-import WarningBox from "./WarningBox";
 import WarningBoxHorizontal from "./WarningBoxHorizontal";
 import TemplateHeader from "./TemplateHeader";
 import StopAlternative from "../StopAlternative";
@@ -59,7 +58,7 @@ const myData = {
   ],
 };
 
-const CancelledStop = () => {
+const TemplateTwo = () => {
   return (
     <TemplateWrapper>
       <TemplateHeader></TemplateHeader>
@@ -504,15 +503,9 @@ const CancelledStop = () => {
           },
         ]}
       ></MapContainer>
-      <WarningBox
-        lines={[
-          { code: "20", color: "#A7FFDA" },
-          { code: "5", color: "#E8A7FF" },
-        ]}
-      ></WarningBox>
       <WarningBoxHorizontal
         stops={[
-          { name: "Mozes @ Menachem Begin", color: "#E8A7FF" },
+          { name: "Mozes @ Menachem Begin", color: "#E8A7FF"},
           // { name: "test@test", color: "#A7FFDA" },
         ]}
       ></WarningBoxHorizontal>
@@ -540,4 +533,4 @@ const CancelledStop = () => {
   );
 };
 
-export default CancelledStop;
+export default TemplateTwo;
