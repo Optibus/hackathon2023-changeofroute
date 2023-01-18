@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
   border: 6px ${({ color }) => color} solid;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 56px;
 `;
 
@@ -21,6 +21,7 @@ const StyledColorLabel = styled.div`
   border-radius: 5px;
   position: absolute;
   padding: 0.2vw 1vw;
+  font-size: 32px;
   font-weight: bold;
   top: 0;
   left: 50%;
@@ -47,6 +48,7 @@ const StopInfoIcon = styled.img`
 const MainSection = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
 
 const StopInfoItemWrapper = styled.div`
@@ -114,6 +116,7 @@ const StopAlternative = ({
             <img
               src={busIcon}
               style={{ position: "absolute", top: "13px", right: "13px" }}
+              alt="Foobar"
             />
           </div>
         </MainSection>
