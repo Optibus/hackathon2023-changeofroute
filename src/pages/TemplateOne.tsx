@@ -97,7 +97,7 @@ const TemplateOne: React.FC = () => {
         name: "Redondo Beach & Marine Park and Ride",
         geometry: {
           type: "Point",
-          coordinates: [0, 0],
+          coordinates: [33.895054, -118.36985400000005],
         },
       },
     ],
@@ -107,7 +107,7 @@ const TemplateOne: React.FC = () => {
       name: "Redondo Beach & Marine Park and Ride",
       geometry: {
         type: "Point",
-        coordinates: [0, 0],
+        coordinates: [33.895054, -118.36985400000005],
       },
     },
     stops: [
@@ -116,7 +116,7 @@ const TemplateOne: React.FC = () => {
         name: "Redondo Beach & Marine Park and Ride",
         geometry: {
           type: "Point",
-          coordinates: [0, 0],
+          coordinates: [33.895054, -118.36985400000005],
         },
       },
     ],
@@ -1045,8 +1045,8 @@ const TemplateOne: React.FC = () => {
       },
     ],
     dates: {
-      start: new Date("1970-01-01T00:00:00.018Z"),
-      end: new Date("1970-01-01T00:00:00.019Z"),
+      start: new Date("1970-01-01T00:00:00.019Z"),
+      end: new Date("1970-01-01T00:00:00.020Z"),
     },
   };
 
