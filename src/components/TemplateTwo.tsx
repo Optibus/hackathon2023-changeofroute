@@ -5,7 +5,7 @@ import TemplateHeader from "./TemplateHeader";
 import TemplateFooter from "./TemplateFooter";
 import styled from "styled-components";
 import { Stop } from "../types";
-import StopsLineStories from "./StopsLine.stories";
+// import StopsLineStories from "./StopsLine.stories";
 
 
 const TemplateWrapper = styled("div")({
@@ -24,7 +24,9 @@ const StyledUserText = styled("div")({
 });
 
 const myData = {
-  color: "#0038ff",
+  IStopsLineProps: [
+  {
+    color: "#A7FFDA",
   stops: [
     {
       id: "1",
@@ -33,6 +35,7 @@ const myData = {
         type: "Point",
         coordinates: [],
       },
+      isCancelled: false,
     },
     {
       id: "2",
@@ -41,6 +44,7 @@ const myData = {
         type: "Point",
         coordinates: [],
       },
+      isCancelled: false,
     },
     {
       id: "3",
@@ -58,25 +62,24 @@ const myData = {
         type: "Point",
         coordinates: [],
       },
+      isCancelled: true,
     },
   ],
   currentStopId: "2",
+  }
+]
 };
 
 const TemplateTwo = () => {
   return (
     <TemplateWrapper>
-      <TemplateHeader></TemplateHeader>
-      {/* <MapContainer></MapContainer> */}
-     
+      <TemplateHeader></TemplateHeader>     
       <WarningBoxHorizontal
         stops={[
           { name: "Mozes @ Menachem Begin", color: "#E8A7FF"},
         ]}
       ></WarningBoxHorizontal>
-      <StopsLine
-       IStopsLineProps = {[ myData]}
-      ></StopsLine>
+      <StopsLine {...myData} />
       <StyledUserText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.
