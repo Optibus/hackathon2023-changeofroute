@@ -48,11 +48,6 @@ const MainSection = styled.div`
   flex-direction: row;
 `;
 
-const StopInfo = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
 const StopInfoItemWrapper = styled.div`
   font-family: Poppins;
   font-size: 17px;
