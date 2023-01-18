@@ -6,17 +6,15 @@ export type Stop = {
   id: string;
   geometry: Point;
   isCancelled?: boolean;
-  color?: string;
 };
 
 export type StopDescription = {
-    name: string;
-    id: string;
-}
+  name: string;
+  id: string;
+};
 
 export type Route = {
   name: string;
-  color: string;
   geometry: MultiLineString | LineString;
 };
 

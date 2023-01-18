@@ -67,7 +67,6 @@ const CancelledStop = () => {
           {
             name: "foo",
             id: "foo",
-            color: "#007cbf",
             geometry: {
               type: "Point",
               coordinates: [34.788821, 32.070659],
@@ -78,7 +77,6 @@ const CancelledStop = () => {
           {
             name: "foo",
             id: "foo",
-            color: "#007cbf",
             geometry: {
               type: "Point",
               coordinates: [34.792059484307686, 32.076675838114674],
@@ -88,7 +86,6 @@ const CancelledStop = () => {
         routes={[
           {
             name: "foo",
-            color: "#E8A7FF",
             geometry: {
               type: "MultiLineString",
               coordinates: [
@@ -117,7 +114,6 @@ const CancelledStop = () => {
           },
           {
             name: "foo",
-            color: "#A7FFDA",
             geometry: {
               type: "MultiLineString",
               coordinates: [
