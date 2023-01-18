@@ -987,8 +987,8 @@ const TemplateOne: React.FC = () => {
       {
         name: "removedSegment",
         geometry: {
-          type: "LineString",
-          coordinates: [
+          type: "MultiLineString",
+          coordinates: [[
             [174.71020128571433, -36.88915499999996],
             [174.710212, -36.889145],
             [174.710231, -36.889134],
@@ -1044,6 +1044,7 @@ const TemplateOne: React.FC = () => {
             [174.710503, -36.888863],
             [174.710203, -36.889153],
             [174.71020128571433, -36.88915499999996],
+          ]
           ],
         },
       },
@@ -1063,6 +1064,7 @@ const TemplateOne: React.FC = () => {
         stops={data.stops}
         cancelledStops={data.cancelledStops}
         routes={data.routes}
+        cancalledRoutes={data.cancelledSegments}
       ></MapContainer>
       <WarningBox
         startDate={data.dates.start!}

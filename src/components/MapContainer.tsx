@@ -13,7 +13,7 @@ type Props = {
   routes?: Route[];
   height?: string;
   width?: string;
-  cancalledRoutes?: Route[];
+  cancalledRoutes?:Route[];
 };
 
 const MapContainer = ({
@@ -84,12 +84,12 @@ const MapContainer = ({
         geometry: route.geometry,
         properties: {
           name: route.name,
-          color: COLORS[i],
         },
       })),
     }),
     [cancalledRoutes]
   );
+  console.log('cancalledRoutesGeoJson', cancalledRoutesGeoJson)
 
   return (
     <Map
