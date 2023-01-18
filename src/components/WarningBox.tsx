@@ -4,6 +4,7 @@ import warning from "../icons/warning2.svg";
 
 const Wrapper = styled("div")({
   backgroundColor: "#FFF06A",
+  borderRadius: "0 2vw 2vw 0",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

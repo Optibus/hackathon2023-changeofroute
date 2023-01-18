@@ -16,6 +16,17 @@ const StyledDiv = styled.div`
   padding: 56px;
 `;
 
+const StyledColorLabel = styled.div`
+  border-radius: 5px;
+  position: absolute;
+  padding: 0.2vw 1vw;
+  font-weight: bold;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: ${({ color }) => color};
+`;
+
 const MinuteNumber = styled.span`
   font-size: 50px;
   line-height: 50px;
@@ -95,6 +106,7 @@ const StopAlternative = ({
 }: StopAlternativeProps) => {
   return (
     <StyledDiv color={color}>
+      <StyledColorLabel color={color}>Route 21</StyledColorLabel>
       <div>
         <MainSection>
           <StyledImage src={man} alt="go" />

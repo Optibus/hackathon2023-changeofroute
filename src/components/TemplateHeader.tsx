@@ -11,6 +11,7 @@ const StyledTemplateHeader = styled("div")({
   width: "100%",
   zIndex: "10",
   padding: "2% 0",
+  fontWeight: "bold",
 });
 const StyledTemplateHeaderText = styled("div")({
   position: "absolute",
