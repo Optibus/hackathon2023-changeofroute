@@ -1,8 +1,8 @@
+import { FeatureCollection } from "geojson";
 import { useMemo } from "react";
 import Map, { Layer, Source } from "react-map-gl";
+import { COLORS } from "../constants";
 import { Route, Stop } from "../types";
-import { FeatureCollection } from "geojson";
-import React from "react";
 
 const TOKEN =
   "pk.eyJ1IjoiZWxhZGFsZmFzc2EiLCJhIjoiY2xkMDRmaGY2MTM3aDNxcWx3dHYzZjl3eiJ9.AM2H8oWyhMuLgC6Rqnp84g";
@@ -27,12 +27,12 @@ const MapContainer = ({
   const stopsGeojson: FeatureCollection = useMemo(
     () => ({
       type: "FeatureCollection",
-      features: stops.map((stop) => ({
+      features: stops.map((stop, i) => ({
         type: "Feature",
         geometry: stop.geometry,
         properties: {
           name: stop.name,
-          color: stop.color,
+          color: COLORS[i],
         },
       })),
     }),
@@ -43,12 +43,12 @@ const MapContainer = ({
     () => ({
       type: "FeatureCollection",
       features:
-        cancelledStops?.map((stop) => ({
+        cancelledStops?.map((stop, i) => ({
           type: "Feature",
           geometry: stop.geometry,
           properties: {
             name: stop.name,
-            color: stop.color,
+            color: COLORS[i],
           },
         })) ?? [],
     }),
@@ -57,12 +57,12 @@ const MapContainer = ({
   const routesGeojson: FeatureCollection = useMemo(
     () => ({
       type: "FeatureCollection",
-      features: routes.map((route) => ({
+      features: routes.map((route, i) => ({
         type: "Feature",
         geometry: route.geometry,
         properties: {
           name: route.name,
-          color: route.color,
+          color: COLORS[i],
         },
       })),
     }),

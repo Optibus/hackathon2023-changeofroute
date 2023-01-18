@@ -6,7 +6,6 @@ const MapExample = () => (
       {
         name: "foo",
         id: "foo",
-        color: "#007cbf",
         geometry: {
           type: "Point",
           coordinates: [34.788821, 32.070659],
@@ -17,7 +16,6 @@ const MapExample = () => (
       {
         name: "foo",
         id: "foo",
-        color: "#007cbf",
         geometry: {
           type: "Point",
           coordinates: [34.792059484307686, 32.076675838114674],
@@ -27,7 +25,6 @@ const MapExample = () => (
     routes={[
       {
         name: "foo",
-        color: "#A7FFDA",
         geometry: {
           type: "MultiLineString",
           coordinates: [
