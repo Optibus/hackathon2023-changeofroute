@@ -94,29 +94,29 @@ const TemplateOne: React.FC = () => {
     cancelledStops: [
       {
         id: "8232",
-        name: "Redondo Beach & Marine Park and Ride",
+        name: "Mount Albert Station",
         geometry: {
           type: "Point",
-          coordinates: [33.895054, -118.36985400000005],
+          coordinates: [-36.88559, 174.71408],
         },
       },
     ],
     alternatives: [],
     stop: {
       id: "8232",
-      name: "Redondo Beach & Marine Park and Ride",
+      name: "Mount Albert Station",
       geometry: {
         type: "Point",
-        coordinates: [33.895054, -118.36985400000005],
+        coordinates: [-36.88559, 174.71408],
       },
     },
     stops: [
       {
         id: "8232",
-        name: "Redondo Beach & Marine Park and Ride",
+        name: "Mount Albert Station",
         geometry: {
           type: "Point",
-          coordinates: [33.895054, -118.36985400000005],
+          coordinates: [-36.88559, 174.71408],
         },
       },
     ],
@@ -1045,8 +1045,8 @@ const TemplateOne: React.FC = () => {
       },
     ],
     dates: {
-      start: new Date("2023-01-18T00:00:00.019Z"),
-      end: new Date("2023-02-18T00:00:00.020Z"),
+      start: new Date("2023-01-18T00:00:00.018Z"),
+      end: new Date("2023-02-18T00:00:00.012Z"),
     },
   };
 
