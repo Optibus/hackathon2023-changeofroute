@@ -110,16 +110,7 @@ const TemplateOne: React.FC = () => {
         coordinates: [174.71408, -36.88559],
       },
     },
-    stops: [
-      {
-        id: "8232",
-        name: "Mount Albert Station",
-        geometry: {
-          type: "Point",
-          coordinates: [174.71408, -36.88559],
-        },
-      },
-    ],
+    stops: [],
     routes: [
       {
         name: "1212",
