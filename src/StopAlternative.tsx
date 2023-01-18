@@ -47,6 +47,7 @@ const StopInfoIcon = styled.img`
 const MainSection = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
 
 const StopInfoItemWrapper = styled.div`
