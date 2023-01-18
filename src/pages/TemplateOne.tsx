@@ -43,8 +43,8 @@ const myData = {
         meters: 400,
       },
       stop: {
-        name: "120 Victoria st. London 192809",
-        id: "# 8943890",
+        name: "897 New North Road, Mount Albert",
+        id: "# 16",
       },
       color: "#E8A7FF",
     },
@@ -54,8 +54,8 @@ const myData = {
         meters: 270,
       },
       stop: {
-        name: "Dizingoff square",
-        id: "# 687350",
+        name: "Mount Albert Shops",
+        id: "# 8230",
       },
       color: "#A7FFDA",
     },
