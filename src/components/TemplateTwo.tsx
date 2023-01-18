@@ -1,5 +1,5 @@
 // import MapContainer from "./MapContainer";
-import StopsLine from "./StopsLine";
+// import StopsLine from "./StopsLine";
 import WarningBoxHorizontal from "./WarningBoxHorizontal";
 import TemplateHeader from "./TemplateHeader";
 import TemplateFooter from "./TemplateFooter";
@@ -79,7 +79,7 @@ const TemplateTwo = () => {
           { name: "Mozes @ Menachem Begin", color: "#E8A7FF"},
         ]}
       ></WarningBoxHorizontal>
-      <StopsLine {...myData} />
+      {/* <StopsLine {...myData} /> */}
       <StyledUserText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.

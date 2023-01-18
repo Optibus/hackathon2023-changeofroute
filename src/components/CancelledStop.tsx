@@ -1,6 +1,5 @@
 import MapContainer from "./MapContainer";
 import WarningBox from "./WarningBox";
-import WarningBoxHorizontal from "./WarningBoxHorizontal";
 import TemplateHeader from "./TemplateHeader";
 import StopAlternative from "../StopAlternative";
 import TemplateFooter from "./TemplateFooter";
@@ -510,12 +509,7 @@ const CancelledStop = () => {
           { code: "5", color: "#E8A7FF" },
         ]}
       ></WarningBox>
-      <WarningBoxHorizontal
-        stops={[
-          { name: "Mozes @ Menachem Begin", color: "#E8A7FF" },
-          // { name: "test@test", color: "#A7FFDA" },
-        ]}
-      ></WarningBoxHorizontal>
+  
       <StyledPleaseUseText>
         Please use these alternative travel options:
       </StyledPleaseUseText>

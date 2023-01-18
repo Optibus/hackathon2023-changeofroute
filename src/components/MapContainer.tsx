@@ -13,6 +13,7 @@ type Props = {
   routes?: Route[];
   height?: string;
   width?: string;
+  // scrollZoom?: boolean; 
 };
 
 const MapContainer = ({
@@ -21,6 +22,7 @@ const MapContainer = ({
   routes = [],
   height = "calc(98 * 0.8vw)",
   width = "98vw",
+  // scrollZoom = false,
 }: Props) => {
   const stopsGeojson: FeatureCollection = useMemo(
     () => ({
@@ -76,7 +78,7 @@ const MapContainer = ({
       }}
       style={{ width, height }}
       mapStyle="mapbox://styles/eladalfassa/cld0gjrc0005614qtts9tdzhk"
-      mapboxAccessToken={TOKEN}
+      mapboxAccessToken={TOKEN}    
     >
       <Source id="routes" type="geojson" data={routesGeojson}>
         <Layer
