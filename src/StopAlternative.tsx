@@ -114,6 +114,7 @@ const StopAlternative = ({
             <img
               src={busIcon}
               style={{ position: "absolute", top: "13px", right: "13px" }}
+              alt="Foobar"
             />
           </div>
         </MainSection>
