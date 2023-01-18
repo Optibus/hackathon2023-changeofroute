@@ -13,7 +13,7 @@ type Props = {
   routes?: Route[];
   height?: string;
   width?: string;
-  cancalledRoutes?:Route[];
+  cancalledRoutes?: Route[];
 };
 
 const MapContainer = ({
@@ -89,14 +89,14 @@ const MapContainer = ({
     }),
     [cancalledRoutes]
   );
-  console.log('cancalledRoutesGeoJson', cancalledRoutesGeoJson)
+  console.log("cancalledRoutesGeoJson", cancalledRoutesGeoJson);
 
   return (
     <Map
       initialViewState={{
-        longitude: 174.71408,
-        latitude: -36.88559,
-        zoom: 14,
+        longitude: 174.70757629945953,
+        latitude: -36.885111237467974,
+        zoom: 15,
       }}
       style={{ width, height }}
       mapStyle="mapbox://styles/eladalfassa/cld0gjrc0005614qtts9tdzhk"
