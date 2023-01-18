@@ -72,12 +72,12 @@ const MapContainer = ({
   const cancalledRoutesGeoJson: FeatureCollection = useMemo(
     () => ({
       type: "FeatureCollection",
-      features: cancalledRoutes.map((route) => ({
+      features: cancalledRoutes.map((route, i) => ({
         type: "Feature",
         geometry: route.geometry,
         properties: {
           name: route.name,
-          color: route.color,
+          color: COLORS[i],
         },
       })),
     }),
@@ -101,14 +101,22 @@ const MapContainer = ({
           paint={{ "line-color": ["get", "color"], "line-width": 12 }}
         />
       </Source>
-      <Source id="cancalled-segment-2" type="geojson" data={cancalledRoutesGeoJson}>
+      <Source
+        id="cancalled-segment-2"
+        type="geojson"
+        data={cancalledRoutesGeoJson}
+      >
         <Layer
           type="line"
           layout={{
             "line-join": "round",
-            "line-cap": "round"
+            "line-cap": "round",
           }}
-          paint={{ "line-color": "#FF2525", "line-width": 12, "line-dasharray": [0.1, 1.8] }}
+          paint={{
+            "line-color": "#FF2525",
+            "line-width": 12,
+            "line-dasharray": [0.1, 1.8],
+          }}
         />
       </Source>
       <Source id="cancelledStops" type="geojson" data={cancelledStopsGeojson}>
