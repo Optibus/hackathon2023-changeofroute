@@ -21,6 +21,7 @@ const StyledColorLabel = styled.div`
   border-radius: 5px;
   position: absolute;
   padding: 0.2vw 1vw;
+  font-size: 32px;
   font-weight: bold;
   top: 0;
   left: 50%;
