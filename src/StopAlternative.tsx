@@ -6,6 +6,7 @@ import line from "./icons/line-divider.svg";
 import stopPoint from "./icons/stop-point.svg";
 import miniStop from "./icons/mini-stop.svg";
 import stopAlternative from "./icons/bus-stop-alternative.svg";
+import busIcon from "./icons/bus.svg";
 
 const StyledDiv = styled.div`
   border-radius: 18px;
@@ -67,6 +68,7 @@ interface StopAlternativeProps {
   stop: StopDescription;
   walkingDistance: WalkingDistance;
   color?: string;
+  routeString?: string;
 }
 
 const MinuteArrowWrraper = styled.div`
@@ -98,15 +100,22 @@ const StopAlternative = ({
   stop,
   walkingDistance,
   color = "red",
+  routeString,
 }: StopAlternativeProps) => {
   return (
     <StyledDiv color={color}>
-      <StyledColorLabel color={color}>Route 21</StyledColorLabel>
+      <StyledColorLabel color={color}>{routeString}</StyledColorLabel>
       <div>
         <MainSection>
           <StyledImage src={man} alt="go" />
           <MinuteArrow minutes={walkingDistance.minutes} />
-          <img src={stopAlternative} alt="stop" />
+          <div style={{ position: "relative" }}>
+            <img src={stopAlternative} alt="stop" />
+            <img
+              src={busIcon}
+              style={{ position: "absolute", top: "13px", right: "13px" }}
+            />
+          </div>
         </MainSection>
         <DividerLine src={line} alt="divider" />
         <StopInfoItem icon={stopPoint} text={stop?.name} />
