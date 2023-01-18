@@ -99,7 +99,7 @@ const MapContainer = ({
         zoom: 15,
       }}
       style={{ width, height }}
-      mapStyle="mapbox://styles/eladalfassa/cld0gjrc0005614qtts9tdzhk"
+      mapStyle="mapbox://styles/eladalfassa/cld1h6z85000q01phk08rhh89"
       mapboxAccessToken={TOKEN}
     >
       <Source id="routes" type="geojson" data={routesGeojson}>
@@ -121,7 +121,8 @@ const MapContainer = ({
           }}
           paint={{
             "line-color": "#FF2525",
-            "line-width": 12,
+            "line-opacity": 0.5,
+            "line-width": 4,
             "line-dasharray": [0.1, 1.8],
           }}
         />
@@ -134,7 +135,7 @@ const MapContainer = ({
             "icon-ignore-placement": true,
             "text-allow-overlap": true,
             "text-ignore-placement": true,
-            "icon-size": 1,
+            "icon-size": 1.5,
             "icon-image": "CancelledStop",
           }}
         />
