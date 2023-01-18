@@ -87,8 +87,8 @@ const MapContainer = ({
   return (
     <Map
       initialViewState={{
-        longitude: 34.776272,
-        latitude: 32.0756,
+        longitude: 174.71408,
+        latitude: -36.88559,
         zoom: 14,
       }}
       style={{ width, height }}
