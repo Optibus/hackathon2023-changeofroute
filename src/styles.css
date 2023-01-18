@@ -1,0 +1,4 @@
+.mapboxgl-control-container .mapboxgl-ctrl-bottom-left,
+.mapboxgl-control-container .mapboxgl-ctrl-bottom-right {
+  display: none;
+}
