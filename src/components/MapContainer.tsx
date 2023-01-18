@@ -54,12 +54,17 @@ const MapContainer = ({
     }),
     [cancelledStops]
   );
-  const routesGeojson: FeatureCollection = useMemo(
+  const routesGeojson: any = useMemo(
     () => ({
       type: "FeatureCollection",
       features: routes.map((route, i) => ({
         type: "Feature",
-        geometry: route.geometry,
+        geometry: {
+          ...route.geometry,
+          coordinates: [
+            route.geometry.coordinates[0].map(([one, two]: any) => [two, one]),
+          ],
+        },
         properties: {
           name: route.name,
           color: COLORS[i],
@@ -68,6 +73,8 @@ const MapContainer = ({
     }),
     [routes]
   );
+
+  console.log(routesGeojson);
 
   const cancalledRoutesGeoJson: FeatureCollection = useMemo(
     () => ({
