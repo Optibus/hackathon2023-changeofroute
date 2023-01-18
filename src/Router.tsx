@@ -4,6 +4,7 @@ import CancelledRouteCube from "./components/CancelledRouteCube";
 import MapExample from "./MapExample";
 import CancelledStop from "./components/CancelledStop";
 import StopAlternative from "./StopAlternative";
+import TemplateOne from "./pages/TemplateOne";
 
 const Root: React.FC = () => (
   <>
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>Home page.</div>,
+        element: <TemplateOne />,
       },
       {
         path: "/edit",
