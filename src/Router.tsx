@@ -2,7 +2,6 @@ import React from "react";
 import { createBrowserRouter, Link, Outlet } from "react-router-dom";
 import CancelledRouteCube from "./components/CancelledRouteCube";
 import MapExample from "./MapExample";
-import MapContainer from "./components/MapContainer";
 import CancelledStop from "./components/CancelledStop";
 import StopAlternative from "./StopAlternative";
 
@@ -13,18 +12,20 @@ const Root: React.FC = () => (
   </>
 );
 const myData = {
-  alternatives: [ {
-    walkingDistance: {
-      minutes: 8,
-      meters: 400
+  alternatives: [
+    {
+      walkingDistance: {
+        minutes: 8,
+        meters: 400,
+      },
+      stop: {
+        name: "120 Victoria st. London 192809",
+        id: "# 8943890",
+      },
+      color: "#E8A7FF",
     },
-    stop: {
-      name: "120 Victoria st. London 192809",
-      id: "# 8943890",
-    },
-    color: "#E8A7FF"
-   }]
-}
+  ],
+};
 
 const myAlternative = myData.alternatives[0];
 
@@ -59,7 +60,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/stop-alternative",
-        element: <StopAlternative stop={myAlternative.stop} walkingDistance={myAlternative.walkingDistance} color={myAlternative.color}/>,
+        element: (
+          <StopAlternative
+            stop={myAlternative.stop}
+            walkingDistance={myAlternative.walkingDistance}
+            color={myAlternative.color}
+          />
+        ),
       },
     ],
   },
