@@ -2,10 +2,11 @@ import { LineString, MultiLineString, Point } from "geojson";
 
 export type Stops = Stop[];
 export type Stop = {
-  name: string;
+  name?: string;
   id: string;
   geometry: Point;
   isCancelled?: boolean;
+  color?: string;
 };
 
 export type StopDescription = {

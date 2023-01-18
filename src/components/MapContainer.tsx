@@ -31,8 +31,7 @@ const MapContainer = ({
         type: "Feature",
         geometry: stop.geometry,
         properties: {
-          name: stop.name,
-          color: COLORS[i],
+          color: stop.color,
         },
       })),
     }),
@@ -48,7 +47,7 @@ const MapContainer = ({
           geometry: stop.geometry,
           properties: {
             name: stop.name,
-            color: COLORS[i],
+            color: stop.color || COLORS[i] || '#FF3838',
           },
         })) ?? [],
     }),

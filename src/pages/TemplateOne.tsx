@@ -112,7 +112,70 @@ const TemplateOne: React.FC = () => {
         coordinates: [174.71408, -36.88559],
       },
     },
-    stops: [],
+    stops: [{
+      "color": "#E8A7FF",
+      "id": "1",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+            174.71024328, -36.8735694
+          ]
+      }
+  },
+  {
+      "color": "#E8A7FF",
+      "id": "2",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+            174.71267537, -36.89135735
+          ]
+      }
+  },
+  {
+      "color": "#A7FFDA",
+      "id": "4",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              174.71585111
+              -36.89451496
+          ]
+      }
+  },
+  {
+      "color": "#A7FFDA",
+      "id": "5",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+            174.7162,
+              -36.88383
+          ]
+      }
+  },
+  {
+      "color": "#A7FFDA",
+      "id": "7",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+            174.72032,
+              -36.88201
+          ]
+      }
+  },
+  {
+      "color": "#A7FFDA",
+      "id": "8",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+            174.708,
+              -36.89152
+          ]
+      }
+  }],
     routes: [
       {
         name: "1212",
